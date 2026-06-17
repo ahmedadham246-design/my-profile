@@ -21,7 +21,7 @@ const Header = () => {
             CONTENT TEAM LEAD · CREATIVE STRATEGIST
           </h3>
 
-          <h1 className="text-white text-8xl md:text-[14rem] leading-none font-bebas-neue  ">
+          <h1 className="text-white text-8xl md:text-[14rem] leading-none font-bebas-neue  font-black ">
             AHMED <br /> ADHAM
             <span className="inline-block size-6 bg-primary" />
           </h1>

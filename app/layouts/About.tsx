@@ -26,17 +26,17 @@ const About = () => {
         <div className="relative h-full order-2 lg:order-2 ">
           <Image
             src={"/images/about.png"}
-            alt="ahmed adham"
+            alt="Ahmed Adham"
             priority={true}
             loading="eager"
             fetchPriority="high"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-contain"
+            className="object-cover rounded-md shadow-md"
           />
         </div>
         <div className="col-span-1 lg:col-span-2 flex flex-col gap-10 order-1 lg:order-2">
-          <h2 className="text-4xl lg:text-8xl font-bebas-neue tracking-wider font-bold">
+          <h2 className="text-4xl lg:text-9xl font-bebas-neue tracking-wider font-black">
             WHO I AM.
           </h2>
           <p className="about-text">
