@@ -3,7 +3,7 @@ import SectionCounter from "../components/section-counter";
 
 const Header = () => {
   return (
-    <div className="h-screen w-full py-8 md:py-12 border-l-primary border-l-12 px-6 md:px-8">
+    <div className="h-full w-full py-8 md:py-12 border-l-primary border-l-12 px-6 md:px-8">
       {/* Header Section For Counter and Logo */}
       <div className="flex items-center justify-between">
         <h4 className="flex gap-1 text-white ">
@@ -14,7 +14,7 @@ const Header = () => {
       </div>
 
       {/* ====================== MAIN CONTENT ====================== */}
-      <div className="mt-14 md:mt-18  w-full grid grid-cols-1  md:grid-cols-3">
+      <div className="mt-14 md:mt-18  w-full relative grid grid-cols-1  md:grid-cols-3">
         {/* Left Content  */}
         <div className="col-span-1 md:col-span-2 md:static md:z-10">
           <h3 className="text-primary font-jet-brains-mono text-lg mb-8 md:mb-12">
@@ -52,7 +52,7 @@ const Header = () => {
           </div>
         </div>
         {/* Right Content Image  */}
-        <div className="w-full md:w-full lg:w-[67%] md:absolute md:-right-40 lg:-right-90 md:-top-10 md:h-full z-10">
+        <div className="w-full lg:absolute lg:-right-90 lg:-top-30 lg:h-full lg:w-[67%] z-10">
           <Image
             src={"/images/header.png"}
             alt={"Ahmed Adham"}
