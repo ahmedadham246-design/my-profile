@@ -15,7 +15,7 @@ const Badge = ({ children }: { children: React.ReactNode }) => {
 
 const About = () => {
   return (
-    <section className="section container mx-auto mt-10 ">
+    <section id="about" className="section container mx-auto mt-10 ">
       {/* HEader  */}
       <div className="flex items-center justify-between mb-8 lg:mb-12">
         <SectionCounterDescription description="ABOUT" start={SECTION_NUMBER} />

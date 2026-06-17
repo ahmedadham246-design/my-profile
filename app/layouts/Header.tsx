@@ -3,7 +3,10 @@ import SectionCounter from "../components/section-counter";
 
 const Header = () => {
   return (
-    <div className="h-full w-full py-8 md:py-12 border-l-primary border-l-12 px-6 md:px-8">
+    <header
+      id="header"
+      className="h-full w-full py-8 md:py-12 border-l-primary border-l-12 px-6 md:px-8"
+    >
       {/* Header Section For Counter and Logo */}
       <div className="flex items-center justify-between">
         <h4 className="flex gap-1 text-white ">
@@ -64,7 +67,7 @@ const Header = () => {
           />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
