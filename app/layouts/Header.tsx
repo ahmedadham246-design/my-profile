@@ -14,7 +14,7 @@ const Header = () => {
       </div>
 
       {/* ====================== MAIN CONTENT ====================== */}
-      <div className="mt-14 md:mt-18  w-full relative grid grid-cols-1  md:grid-cols-3">
+      <div className="mt-8 md:mt-18  w-full relative grid grid-cols-1  md:grid-cols-3">
         {/* Left Content  */}
         <div className="col-span-1 md:col-span-2 md:static md:z-10">
           <h3 className="text-primary font-jet-brains-mono text-lg mb-8 md:mb-12">
@@ -26,7 +26,7 @@ const Header = () => {
             <span className="inline-block size-6 bg-primary" />
           </h1>
 
-          <p className="mt-10 font-dm-sans text-xl md:text-2xl  text-muted lg:max-w-[90%]">
+          <p className=" mt-8 md:mt-10 font-dm-sans text-xl md:text-2xl  text-muted lg:max-w-[90%]">
             I don't make content.{" "}
             <span className="text-primary">
               I craft brands people talk about
