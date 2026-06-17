@@ -52,6 +52,12 @@ body {
   background: var(--primary);
 }
 
+/* ===========  SECTION STYLES =========== */
+
+.section {
+  @apply px-4 lg:px-6 py-10 lg:py-20;
+}
+
 /* ===========  HEADER SECTION =========== */
 .header-statistics {
   @apply text-start font-jet-brains-mono;
@@ -62,4 +68,10 @@ body {
 
 .header-statistics span {
   @apply text-primary text-4xl font-bold;
+}
+
+/* ================== ABOUT SECTION ================== */
+
+.about-text {
+  @apply lg:text-xl font-normal lg:font-medium lg:max-w-[80%] leading-8 lg:leading-12;
 }
