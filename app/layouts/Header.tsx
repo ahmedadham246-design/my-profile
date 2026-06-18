@@ -3,7 +3,10 @@ import SectionCounter from "../components/section-counter";
 
 const Header = () => {
   return (
-    <div className="h-full w-full py-8 md:py-12 border-l-primary border-l-12 px-6 md:px-8">
+    <header
+      id="header"
+      className="h-full w-full py-8 md:py-12 border-l-primary border-l-12 px-6 md:px-8"
+    >
       {/* Header Section For Counter and Logo */}
       <div className="flex items-center justify-between">
         <h4 className="flex gap-1 text-white ">
@@ -14,19 +17,19 @@ const Header = () => {
       </div>
 
       {/* ====================== MAIN CONTENT ====================== */}
-      <div className="mt-14 md:mt-18  w-full relative grid grid-cols-1  md:grid-cols-3">
+      <div className="mt-8 md:mt-18  w-full relative grid grid-cols-1  md:grid-cols-3">
         {/* Left Content  */}
         <div className="col-span-1 md:col-span-2 md:static md:z-10">
           <h3 className="text-primary font-jet-brains-mono text-lg mb-8 md:mb-12">
             CONTENT TEAM LEAD · CREATIVE STRATEGIST
           </h3>
 
-          <h1 className="text-white text-8xl md:text-[14rem] leading-none font-bebas-neue  ">
+          <h1 className="text-white text-8xl md:text-[14rem] leading-none font-bebas-neue  font-black ">
             AHMED <br /> ADHAM
             <span className="inline-block size-6 bg-primary" />
           </h1>
 
-          <p className="mt-10 font-dm-sans text-xl md:text-2xl  text-muted lg:max-w-[90%]">
+          <p className=" mt-8 md:mt-10 font-dm-sans text-xl md:text-2xl  text-muted lg:max-w-[90%]">
             I don't make content.{" "}
             <span className="text-primary">
               I craft brands people talk about
@@ -64,7 +67,7 @@ const Header = () => {
           />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -8,11 +8,12 @@ const SectionCounter = ({
   end = 25,
   className = "",
 }: ISectionCounter) => {
+  const number = start > 9 ? start.toString() : `0${start.toString()}`;
   return (
     <span
       className={`font-jet-brains-mono text-sm text-text-muted ${className}`}
     >
-      {start}/{end}
+      {number}/{end}
     </span>
   );
 };
