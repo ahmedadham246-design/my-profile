@@ -6,7 +6,7 @@ interface AboutCardProps {
   highlighted?: boolean;
 }
 
-const AboutCard = ({
+const BscarCard = ({
   title,
   description,
   mainLetter,
@@ -44,4 +44,4 @@ const AboutCard = ({
   );
 };
 
-export default AboutCard;
+export default BscarCard;

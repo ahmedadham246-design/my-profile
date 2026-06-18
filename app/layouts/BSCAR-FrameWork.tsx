@@ -1,4 +1,4 @@
-import AboutCard from "../components/AboutCard";
+import BscarCard from "../components/BscarCard";
 import SectionCounter from "../components/section-counter";
 import SectionCounterDescription from "../components/section-counter-descriotion";
 import { BSCAR_FRAMEWORK_STEP } from "../data/About";
@@ -6,7 +6,7 @@ import { BSCAR_FRAMEWORK_STEP } from "../data/About";
 const SECTION_NUMBER = 3;
 const BASCRFrameWork = () => {
   return (
-    <section id="BASCAR" className="bg-[#faeed9] section">
+    <section id="BASCAR" className="bg-yellow-50 section">
       {/* HEADER */}
       <div className="flex items-center justify-between mb-4 lg:mb-12">
         <SectionCounterDescription
@@ -29,9 +29,9 @@ const BASCRFrameWork = () => {
         <hr className=" border-gray-500/25 w-full" />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 lg:mt-5 lg:gap-0 gap-10 ">
+      <div className="grid grid-cols-1 lg:grid-cols-5 lg:mt-5 lg:gap-0 gap-10  ">
         {BSCAR_FRAMEWORK_STEP.map((step) => (
-          <AboutCard
+          <BscarCard
             key={step.number}
             step={step.number}
             mainLetter={step.letter}
