@@ -43,6 +43,9 @@ body {
 .section {
   scroll-snap-align: start;
 }
+.section-header {
+  @apply flex items-center justify-between;
+}
 
 /* SCROLLBAR STYLES */
 
