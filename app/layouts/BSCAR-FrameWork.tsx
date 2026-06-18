@@ -20,7 +20,7 @@ const BASCRFrameWork = () => {
           <h2 className="text-black font-bebas-neue text-5xl lg:text-9xl font-black w-full lg:w-[50%]">
             THE BSCAR FRAMEWORK.
           </h2>
-          <p className="text-black font-jet-brains-mono  text-base lg:text-lg leading-12 text-justify w-full lg:w-[28%]">
+          <p className="text-black font-jet-brains-mono  text-base lg:text-lg leading-8 text-justify w-full lg:w-[28%]">
             MY OPERATING SYSTEM FOR EVERY PROJECT. FIVE STEPS THAT{" "}
             <span className="font-bold">LOOP</span> . EACH CYCLE BUILDS ON THE
             LAST UNTIL THE BRAND HAS MOMENTUM.
