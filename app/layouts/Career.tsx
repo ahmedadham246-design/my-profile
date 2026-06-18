@@ -95,6 +95,11 @@ const Career = () => {
           </div>
         </div>
       </div>
+
+      <p className="text-center font-jet-brains-mono text-sm">
+        IN-HOUSE COPYWRITER → TEAM LEAD →{" "}
+        <span className="text-primary">FOUNDER</span>
+      </p>
     </section>
   );
 };
