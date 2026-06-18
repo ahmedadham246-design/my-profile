@@ -1,4 +1,4 @@
-export const timeline = [
+export const TIME_LINE = [
   {
     year: "2019",
 

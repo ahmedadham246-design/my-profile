@@ -1,6 +1,7 @@
 import SectionCounter from "../components/section-counter";
 import SectionCounterDescription from "../components/section-counter-descriotion";
-import { timeline } from "../data/TimeLine";
+import TimelineVertical from "../components/timeline-vertical";
+import { TIME_LINE } from "../data/TimeLine";
 
 const SECTION_NUMBER = 5;
 
@@ -25,52 +26,67 @@ const Career = () => {
         </div>
         <hr className=" border-gray-500/25 w-full" />
 
-        {/* Time Line  */}
-        <div className="relative">
-          <div className="absolute top-8 left-0 right-0 h-px bg-zinc-700" />
+        {/* Mobile: Vertical Timeline */}
+        <div className="sm:hidden">
+          <TimelineVertical />
+        </div>
 
-          <div className="grid grid-cols-7 gap-8">
-            {timeline.map((item) => (
+        {/* sm: Horizontal Scrollable Timeline */}
+        <div className="hidden sm:grid lg:hidden relative overflow-x-auto -mx-4 px-4">
+          <div className="absolute top-8 left-0 right-0 h-px bg-zinc-700" />
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-8 min-w-[500px]">
+            {TIME_LINE.map((item) => (
               <div
                 key={item.company}
                 className="relative flex flex-col items-center text-center"
               >
-                {/* Year */}
-
                 <span className="text-xs text-zinc-500 mb-6">{item.year}</span>
-
-                {/* Dot */}
-
                 <div
-                  className={`
-
-                z-10 h-4 w-4 rounded-full border-2
-
-                ${
-                  item.active
-                    ? "bg-yellow-400 border-yellow-400"
-                    : "border-zinc-400 bg-black"
-                }
-
-              `}
+                  className={`z-10 h-4 w-4 rounded-full border-2 ${
+                    item.active
+                      ? "bg-primary border-primary"
+                      : "border-zinc-400 bg-black"
+                  }`}
                 />
-
-                {/* Company */}
-
                 <h3
-                  className={`
-
-                mt-8 text-3xl font-bold uppercase leading-none
-
-                ${item.active ? "text-yellow-400" : ""}
-
-              `}
+                  className={`mt-8 text-xl font-bold uppercase leading-none ${
+                    item.active ? "text-primary" : ""
+                  }`}
                 >
                   {item.company}
                 </h3>
+                <p className="mt-4 text-xs text-zinc-400 max-w-[140px]">
+                  {item.role}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-                {/* Role */}
-
+        {/* lg: Full 7-Column Horizontal Timeline */}
+        <div className="hidden lg:block relative">
+          <div className="absolute top-8 left-0 right-0 h-px bg-zinc-700" />
+          <div className="grid grid-cols-7 gap-8">
+            {TIME_LINE.map((item) => (
+              <div
+                key={item.company}
+                className="relative flex flex-col items-center text-center"
+              >
+                <span className="text-xs text-zinc-500 mb-6">{item.year}</span>
+                <div
+                  className={`z-10 h-4 w-4 rounded-full border-2 ${
+                    item.active
+                      ? "bg-primary border-primary"
+                      : "border-zinc-400 bg-black"
+                  }`}
+                />
+                <h3
+                  className={`mt-8 text-3xl font-bold uppercase leading-none ${
+                    item.active ? "text-primary" : ""
+                  }`}
+                >
+                  {item.company}
+                </h3>
                 <p className="mt-4 text-sm text-zinc-400 max-w-[180px]">
                   {item.role}
                 </p>
