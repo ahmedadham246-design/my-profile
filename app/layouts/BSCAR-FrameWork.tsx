@@ -1,6 +1,7 @@
 import AboutCard from "../components/AboutCard";
 import SectionCounter from "../components/section-counter";
 import SectionCounterDescription from "../components/section-counter-descriotion";
+import { BSCAR_FRAMEWORK_STEP } from "../data/About";
 
 const SECTION_NUMBER = 3;
 const BASCRFrameWork = () => {
@@ -28,41 +29,25 @@ const BASCRFrameWork = () => {
         <hr className=" border-gray-500/25 w-full" />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-5 mt-5 lg:gap-0 gap-10 ">
-        <AboutCard
-          step={1}
-          mainLetter="B"
-          title="Brief"
-          description="Strip the ask to the problem. What does success look like in numbers & in feeling, in 90 days?"
-        />
+      <div className="grid grid-cols-1 lg:grid-cols-5 lg:mt-5 lg:gap-0 gap-10 ">
+        {BSCAR_FRAMEWORK_STEP.map((step) => (
+          <AboutCard
+            key={step.number}
+            step={step.number}
+            mainLetter={step.letter}
+            title={step.title}
+            description={step.description}
+            highlighted={step.number === 3}
+          />
+        ))}
+      </div>
 
-        <AboutCard
-          step={2}
-          mainLetter="S"
-          title="Strategy"
-          description="Audience, insight, angle, channels. The argument behind every decision before the first asset."
-        />
-
-        <AboutCard
-          step={3}
-          mainLetter="C"
-          title="Content"
-          description="Make the work. Copy, scripts, art direction, production. Ship at the strategy's cadence."
-          highlighted
-        />
-
-        <AboutCard
-          step={4}
-          mainLetter="A"
-          title="Analysis"
-          description="Read the data with the strategy in your hand. What converted, what didn't, what surprised us."
-        />
-        <AboutCard
-          step={5}
-          mainLetter="R"
-          title="Repeat"
-          description="Compound. The brands that win are the ones running the loop fastest & with consistency."
-        />
+      <div className="flex items-center justify-center gap-2 mt-5">
+        <span className="w-[5%] h-px bg-black" />
+        <p className="font-jet-brains-mono text-text-muted">
+          EACH CYCLE BUILDS ON THE LAST
+        </p>
+        <span className="w-[5%] h-px bg-black" />
       </div>
     </section>
   );
