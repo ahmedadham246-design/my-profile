@@ -6,13 +6,11 @@ interface ISectionCounter {
 const SectionCounter = ({
   start = 0,
   end = 25,
-  className = "",
+  className = "text-text-muted",
 }: ISectionCounter) => {
   const number = start > 9 ? start.toString() : `0${start.toString()}`;
   return (
-    <span
-      className={`font-jet-brains-mono text-sm text-text-muted ${className}`}
-    >
+    <span className={`font-jet-brains-mono text-sm ${className}`}>
       {number}/{end}
     </span>
   );
