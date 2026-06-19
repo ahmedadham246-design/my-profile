@@ -1,6 +1,7 @@
 "use client";
 
 import { Eye, PlayIcon, ExternalLink } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface ReelCardProps {
@@ -22,11 +23,11 @@ const ReelCard = ({ seenCount, videoUrl }: ReelCardProps) => {
   }, [videoUrl]);
 
   return (
-    <a
+    <Link
       href={videoUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className={`relative h-[600px] w-[350px] overflow-hidden rounded-2xl border border-primary block ${""}`}
+      className={`relative h-[600px] w-[350px] overflow-hidden rounded-2xl  block ${""}`}
     >
       {thumbnail ? (
         <img
@@ -43,17 +44,14 @@ const ReelCard = ({ seenCount, videoUrl }: ReelCardProps) => {
         </div>
       )}
 
-      <PlayIcon className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-16 text-white/90 drop-shadow-lg" />
-
-      <div className="absolute bottom-0 left-0 w-full bg-black/50 p-3 text-white rounded-b-2xl">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Eye size={14} /> <span>{seenCount} views</span>
-          </div>
-          <ExternalLink size={14} className="text-white/80" />
-        </div>
-      </div>
-    </a>
+      <button className="size-14 flex flex-col items-center justify-center bg-primary rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-md">
+        <PlayIcon
+          fill={"oklch(62.3% 0.214 259.815) "}
+          className=" size-6 text-blue-500 drop-shadow-lg"
+        />
+        <span className="w-4 bg-blue-500 h-px" />
+      </button>
+    </Link>
   );
 };
 
