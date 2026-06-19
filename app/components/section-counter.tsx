@@ -11,7 +11,7 @@ const SectionCounter = ({
   const number = start > 9 ? start.toString() : `0${start.toString()}`;
   return (
     <span
-      className={`font-jet-brains-mono text-sm text-text-muted ${className}`}
+      className={`font-jet-brains-mono text-sm ${className}`}
     >
       {number}/{end}
     </span>
