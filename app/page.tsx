@@ -5,6 +5,7 @@ import Career from "./layouts/Career";
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
 import KhaznaApp from "./layouts/Khazna/Khazna-app";
+import KhaznaDesigns from "./layouts/Khazna/Khazna-designs";
 import KhaznaReels from "./layouts/Khazna/Khazna-reels";
 import Numbers from "./layouts/Numbers";
 
@@ -18,6 +19,7 @@ const HomeScreen = () => {
       <Career />
       <KhaznaApp />
       <KhaznaReels />
+      <KhaznaDesigns />
 
       <Footer />
     </>

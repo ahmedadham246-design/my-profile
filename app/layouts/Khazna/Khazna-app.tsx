@@ -1,7 +1,7 @@
 import SectionCounter from "@/app/components/section-counter";
 import SectionCounterDescription from "@/app/components/section-counter-descriotion";
 import Image from "next/image";
-import KhaznaLogo from "@/public/images/khazna.png";
+import KhaznaLogo from "@/public/images/khazna.webp";
 import { RESULTS, RESULTS_BADGE } from "@/app/data/KhaznaData";
 import { Badge } from "@/app/components/Badge";
 const COUNTER = 6;
@@ -17,7 +17,13 @@ const KhaznaApp = () => {
           <h3 className="text-primary font-bebas-neue font-semibold text-6xl lg:text-7xl flex-wrap lg:flex-nowrap">
             01 Khazna App
           </h3>
-          <Image src={KhaznaLogo} alt="Khazna Logo" width={250} height={150} style={{ width: "auto", height: "auto" }} />
+          <Image
+            src={KhaznaLogo}
+            alt="Khazna Logo"
+            width={250}
+            height={150}
+            style={{ width: "auto", height: "auto" }}
+          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 h-full ">

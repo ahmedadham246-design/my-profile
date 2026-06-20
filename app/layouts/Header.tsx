@@ -57,7 +57,7 @@ const Header = () => {
         {/* Right Content Image  */}
         <div className="w-full lg:absolute lg:-right-90 lg:-top-30 lg:h-full lg:w-[67%] z-10">
           <Image
-            src={"/images/header.png"}
+            src={"/images/header.webp"}
             alt={"Ahmed Adham"}
             width={800}
             height={1200}
