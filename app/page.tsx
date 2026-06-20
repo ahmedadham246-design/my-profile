@@ -27,6 +27,7 @@ import MonaLogo from "@/public/images/dr-mona-logo.webp";
 import RoastLogo from "@/public/images/roast-logo.webp";
 import GrandPadelLogo from "@/public/images/padel-logo.webp";
 import AnticoLogo from "@/public/images/antico-logo.webp";
+import ZeedLogo from "@/public/images/zed-logo.webp";
 import { ROAST_BADGES, ROAST_METRICS, ROAST_REELS } from "./data/RoastData";
 import {
   GRAND_PADEL_BADGES,
@@ -40,6 +41,7 @@ import {
   ANTICO_DESIGNS,
 } from "./data/AnticoData";
 import { ICON_BADGES, ICON_METRICS, ICON_REELS } from "./data/IconData";
+import { ZEED_METRICS, ZEED_BADGES, ZEED_REELS } from "./data/ZeedData";
 
 const HomeScreen = () => {
   return (
@@ -283,6 +285,39 @@ const HomeScreen = () => {
         subtitleMuted="2025 "
         dateRange="2025"
         reels={ICON_REELS}
+      />
+      {/* 07 Zeed */}
+      <CaseStudySection
+        counter={21}
+        caseLabel="CASE 07"
+        title="07 Zeed"
+        logo={ZeedLogo}
+        logoAlt="Zeed Logo"
+        logoWidth={150}
+        logoHeight={50}
+        headline={
+          <>
+            BUILD RELATIONSHIP WITH THE FOUNDER{" "}
+            <span className="text-primary">BEFORE</span> SELLING THE PRODUCT.
+          </>
+        }
+        description="A new local fashion brand with basics. Differentiator was a multi-generation family clothing legacy. Founder-led storytelling sold out the full first stock organically, as a pre-orders before the shop went live."
+        challenge="No audience, no recognition, basic category identical to 50 other brands without a story."
+        insight="Egyptian fashion buyers in this segment buy the founder before the product."
+        execution="Founder-led legacy storytelling · process B-roll · then culture-relevant summer launch art direction."
+        resultsLabel="RESULTS"
+        results={ZEED_METRICS}
+        badges={ZEED_BADGES}
+      />
+      <ReelsSection
+        counter={23}
+        description="REELS POC"
+        sectionNumber="07"
+        title="ZEEED FASHION · REELS"
+        subtitle="FASHION BRAND EGYPT"
+        subtitleMuted="2025"
+        dateRange="2025"
+        reels={ZEED_REELS}
       />
       <Footer />
     </>
