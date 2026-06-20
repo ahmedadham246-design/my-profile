@@ -2,9 +2,8 @@ import DesignCard from "@/app/components/DesignCard";
 import SectionCounter from "@/app/components/section-counter";
 import SectionCounterDescription from "@/app/components/section-counter-descriotion";
 import { KHAZNA_DESIGNS } from "@/app/data/KhaznaData";
-import Link from "next/link";
 
-const COUNTER = 7;
+const COUNTER = 8;
 const KhaznaDesigns = () => {
   return (
     <section className="bg-foreground py-20 px-6 md:px-12 lg:px-24 ">

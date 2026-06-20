@@ -12,7 +12,7 @@ const KhaznaApp = () => {
         <SectionCounterDescription description="CASE 01" start={6} />
         <SectionCounter start={6} />
       </div>
-      <div className="container mx-auto  grid gap-8">
+      <div className="container mx-auto grid gap-8 ">
         <div className="flex items-center justify-between border-b border-b-gray-50/20">
           <h3 className="text-primary font-bebas-neue font-semibold text-6xl lg:text-7xl flex-wrap lg:flex-nowrap">
             01 Khazna App
