@@ -26,8 +26,19 @@ import KhaznaLogo from "@/public/images/khazna.webp";
 import MonaLogo from "@/public/images/dr-mona-logo.webp";
 import RoastLogo from "@/public/images/roast-logo.webp";
 import GrandPadelLogo from "@/public/images/padel-logo.webp";
+import AnticoLogo from "@/public/images/antico-logo.webp";
 import { ROAST_BADGES, ROAST_METRICS, ROAST_REELS } from "./data/RoastData";
-import { GRAND_PADEL_BADGES, GRAND_PADEL_METRICS, GRAND_PADEL_REELS } from "./data/GrandPadelData";
+import {
+  GRAND_PADEL_BADGES,
+  GRAND_PADEL_METRICS,
+  GRAND_PADEL_REELS,
+} from "./data/GrandPadelData";
+import {
+  ANTICO_BADGES,
+  ANTICO_METRICS,
+  ANTICO_REELS,
+  ANTICO_DESIGNS,
+} from "./data/AnticoData";
 
 const HomeScreen = () => {
   return (
@@ -176,8 +187,7 @@ const HomeScreen = () => {
         logoHeight={50}
         headline={
           <>
-            MADE PADEL LOOK FUN,{" "}
-            <span className="text-primary">NOT PRO.</span>
+            MADE PADEL LOOK FUN, <span className="text-primary">NOT PRO.</span>
           </>
         }
         description="A year-old padel court no one knew about. We shifted the content from sport-highlights to social-experience and pulled the curious in. 4x sales in two months, zero paid spend."
@@ -197,6 +207,50 @@ const HomeScreen = () => {
         subtitleMuted="2025"
         dateRange="2025"
         reels={GRAND_PADEL_REELS}
+      />
+      {/* 05 Antico Café */}
+      <CaseStudySection
+        counter={16}
+        caseLabel="CASE 05"
+        title="05 Antico"
+        logo={AnticoLogo}
+        logoAlt="Antico Logo"
+        logoWidth={150}
+        logoHeight={50}
+        headline={
+          <>
+            SOLD THE ITALIAN MORNING & VIBES{" "}
+            <span className="text-primary">BEFORE THE PRODUCT.</span>
+          </>
+        }
+        description="Concept café in a city that had never seen one. We seeded a feeling before a brand, atmospheric, no product shots, so by opening day the audience already had a memory attached."
+        challenge="No reference for Italian concept café locally. Educate before they can want it."
+        insight="Italian breakfast culture is visual and ritual-based. Sell the experience before the product."
+        execution="Atmospheric pre-launch · home and family content post-launch. Owners as the family of the home."
+        resultsLabel="RESULTS"
+        results={ANTICO_METRICS}
+        badges={ANTICO_BADGES}
+      />
+      <ReelsSection
+        counter={17}
+        description="REELS POC"
+        sectionNumber="05"
+        title="ANTICO CAFÉ · REELS"
+        subtitle="F&B · ITALIAN CONCEPT"
+        subtitleMuted="ISMAILIA · "
+        dateRange="2025"
+        reels={ANTICO_REELS}
+      />
+      <DesignsSection
+        counter={18}
+        description="PHOTOS POC"
+        sectionNumber="05"
+        title="ANTICO CAFÉ · Photography"
+        subtitle="F&B · ITALIAN CONCEPT ISMAILIA"
+        dateRange="2025"
+        bgColor="bg-foreground"
+        designs={ANTICO_DESIGNS}
+        imagePrefix="antiko"
       />
       <Footer />
     </>
