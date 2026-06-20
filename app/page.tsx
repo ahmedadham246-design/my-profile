@@ -39,6 +39,7 @@ import {
   ANTICO_REELS,
   ANTICO_DESIGNS,
 } from "./data/AnticoData";
+import { ICON_BADGES, ICON_METRICS, ICON_REELS } from "./data/IconData";
 
 const HomeScreen = () => {
   return (
@@ -251,6 +252,37 @@ const HomeScreen = () => {
         bgColor="bg-foreground"
         designs={ANTICO_DESIGNS}
         imagePrefix="antiko"
+      />
+      {/* 06 Icon 10 */}
+      <CaseStudySection
+        counter={19}
+        caseLabel="CASE 06"
+        title="06 Icon 10"
+        logoWidth={150}
+        logoHeight={50}
+        headline={
+          <>
+            FIXED THE <span className="text-primary">SPACE</span> BEFORE
+            FIXING THE CONTENT.
+          </>
+        }
+        description="A café-PlayStation hybrid that wanted to reposition as a café only, but the floor plan worked against the story. First deliverable wasn't content, it was a renovation plan. Then content followed."
+        challenge="Five-year hybrid wanted to be a café. The layout contradicted the ambition."
+        insight="Content can't reposition a space that contradicts the story. Fix the space first."
+        execution="Strategy rebrand · reels in renovated space · staff EGC · influencer + paid combo."
+        resultsLabel="RESULTS"
+        results={ICON_METRICS}
+        badges={ICON_BADGES}
+      />
+      <ReelsSection
+        counter={20}
+        description="REELS POC"
+        sectionNumber="06"
+        title="ICON 10 · REELS"
+        subtitle="F&B · CAFÉ REBRAND ISMAILIA"
+        subtitleMuted="2025 "
+        dateRange="2025"
+        reels={ICON_REELS}
       />
       <Footer />
     </>

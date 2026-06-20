@@ -8,10 +8,10 @@ interface CaseStudySectionProps {
   counter: number;
   caseLabel: string;
   title: string;
-  logo: StaticImageData;
-  logoAlt: string;
-  logoWidth: number;
-  logoHeight: number;
+  logo?: StaticImageData;
+  logoAlt?: string;
+  logoWidth?: number;
+  logoHeight?: number;
   headline: ReactNode;
   description: string;
   challenge: string;
@@ -50,13 +50,15 @@ const CaseStudySection = ({
           <h3 className="text-primary font-bebas-neue font-semibold text-6xl lg:text-7xl flex-wrap lg:flex-nowrap">
             {title}
           </h3>
-          <Image
-            src={logo}
-            alt={logoAlt}
-            width={logoWidth}
-            height={logoHeight}
-            style={{ width: "auto", height: "auto" }}
-          />
+          {logo && (
+            <Image
+              src={logo}
+              alt={logoAlt || ""}
+              width={logoWidth || 150}
+              height={logoHeight || 50}
+              style={{ width: "auto", height: "auto" }}
+            />
+          )}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 h-full ">
