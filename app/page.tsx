@@ -25,7 +25,9 @@ import Numbers from "./layouts/Numbers";
 import KhaznaLogo from "@/public/images/khazna.webp";
 import MonaLogo from "@/public/images/dr-mona-logo.webp";
 import RoastLogo from "@/public/images/roast-logo.webp";
+import GrandPadelLogo from "@/public/images/padel-logo.webp";
 import { ROAST_BADGES, ROAST_METRICS, ROAST_REELS } from "./data/RoastData";
+import { GRAND_PADEL_BADGES, GRAND_PADEL_METRICS, GRAND_PADEL_REELS } from "./data/GrandPadelData";
 
 const HomeScreen = () => {
   return (
@@ -162,6 +164,39 @@ const HomeScreen = () => {
         subtitleMuted="2025"
         dateRange="2019-Present"
         reels={ROAST_REELS}
+      />
+      {/* 04 Grand Padel */}
+      <CaseStudySection
+        counter={14}
+        caseLabel="CASE 04"
+        title="04 Grand Padel"
+        logo={GrandPadelLogo}
+        logoAlt="Grand Padel Logo"
+        logoWidth={150}
+        logoHeight={50}
+        headline={
+          <>
+            MADE PADEL LOOK FUN,{" "}
+            <span className="text-primary">NOT PRO.</span>
+          </>
+        }
+        description="A year-old padel court no one knew about. We shifted the content from sport-highlights to social-experience and pulled the curious in. 4x sales in two months, zero paid spend."
+        challenge="Open over a year, barely known. Off-center location. Padel still emerging in Ismailia."
+        insight="In a new rising sport, the growth driver isn't elite players, it's people who want to try it. Target the non-player."
+        execution="Fun, relatable content with regular people laughing, failing, celebrating. The court as character."
+        resultsLabel="RESULTS"
+        results={GRAND_PADEL_METRICS}
+        badges={GRAND_PADEL_BADGES}
+      />
+      <ReelsSection
+        counter={15}
+        description="REELS POC"
+        sectionNumber="04"
+        title="GRAND PADEL · REELS"
+        subtitle="SPORTS & ENTERTAINMENT · ISMAILIA"
+        subtitleMuted="2025"
+        dateRange="2025"
+        reels={GRAND_PADEL_REELS}
       />
       <Footer />
     </>
