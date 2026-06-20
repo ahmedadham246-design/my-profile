@@ -1,81 +1,94 @@
+import { ReactNode } from "react";
+import Image, { StaticImageData } from "next/image";
 import SectionCounter from "@/app/components/section-counter";
 import SectionCounterDescription from "@/app/components/section-counter-descriotion";
-import Image from "next/image";
-import KhaznaLogo from "@/public/images/khazna.webp";
-import { RESULTS, RESULTS_BADGE } from "@/app/data/KhaznaData";
 import { Badge } from "@/app/components/Badge";
-const COUNTER = 6;
-const KhaznaApp = () => {
+
+interface CaseStudySectionProps {
+  counter: number;
+  caseLabel: string;
+  title: string;
+  logo: StaticImageData;
+  logoAlt: string;
+  logoWidth: number;
+  logoHeight: number;
+  headline: ReactNode;
+  description: string;
+  challenge: string;
+  insight: string;
+  execution: string;
+  resultsLabel: string;
+  results: { title: string; unit?: string; description: string }[];
+  badges: string[];
+}
+
+const CaseStudySection = ({
+  counter,
+  caseLabel,
+  title,
+  logo,
+  logoAlt,
+  logoWidth,
+  logoHeight,
+  headline,
+  description,
+  challenge,
+  insight,
+  execution,
+  resultsLabel,
+  results,
+  badges,
+}: CaseStudySectionProps) => {
   return (
-    <section className="section bg-black">
+    <section className="section bg-black ">
       <div className="section-header mb-8">
-        <SectionCounterDescription description="CASE 01" start={6} />
-        <SectionCounter start={6} />
+        <SectionCounterDescription description={caseLabel} start={counter} />
+        <SectionCounter start={counter} />
       </div>
       <div className="container mx-auto grid gap-8 ">
         <div className="flex items-center justify-between border-b border-b-gray-50/20">
           <h3 className="text-primary font-bebas-neue font-semibold text-6xl lg:text-7xl flex-wrap lg:flex-nowrap">
-            01 Khazna App
+            {title}
           </h3>
           <Image
-            src={KhaznaLogo}
-            alt="Khazna Logo"
-            width={250}
-            height={150}
+            src={logo}
+            alt={logoAlt}
+            width={logoWidth}
+            height={logoHeight}
             style={{ width: "auto", height: "auto" }}
           />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 h-full ">
-          {/* Content */}
           <div className="flex flex-col justify-between h-full lg:col-span-2 lg:max-w-[85%]">
-            <h4 className=" text-5xl  lg:text-7xl font-black font-bebas-neue">
-              EGYPT'S EMBEDDED FINANCE{" "}
-              <span className="text-primary">FLAGSHIP</span> SCALED ACROSS TWO
-              MARKETS.
+            <h4 className="text-5xl lg:text-7xl font-black font-bebas-neue">
+              {headline}
             </h4>
-            <p className="text-gray-200 text-lg">
-              Built the full content engine from scratch (voice guide, CRM
-              library, UX copy, campaigns, and the Saudi Arabia launch) for one
-              of Egypt's largest fintech apps. Bilingual, compliant, and human
-              enough that people stopped flinching at finance.
-            </p>
+            <p className="text-gray-200 text-lg">{description}</p>
 
             <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4 border-t border-gray-50/20 pt-2 ">
               <li className="flex flex-col gap-2">
                 <span className="text-primary">CHALLENGE</span>
-                <p className="text-white text-sm">
-                  Small team. Fast scale. Every piece of copy bilingual,
-                  on-brand, compliant across two markets.
-                </p>
+                <p className="text-white text-sm">{challenge}</p>
               </li>
               <li className="flex flex-col gap-2">
                 <span className="text-primary">INSIGHT</span>
-                <p className="text-white text-sm">
-                  Fintech in Egypt carries stigma. Humanize through content that
-                  educates, entertains, simplifies.
-                </p>
+                <p className="text-white text-sm">{insight}</p>
               </li>
               <li className="flex flex-col gap-2">
                 <span className="text-primary">EXECUTION</span>
-                <p className="text-white text-sm">
-                  Countless strategies, Voice guide, 2,000-message CRM library,
-                  app's first-edition UX copy, full KSA launch strategy.
-                </p>
+                <p className="text-white text-sm">{execution}</p>
               </li>
             </ul>
           </div>
 
-          {/* RESULTS CARD */}
           <div className="bg-[#161616] px-4 py-6 col-span-1 border border-gray-50/20 ">
-            {/* RESULTS CARD HEADER */}
             <div className="border-b border-b-gray-50/20 flex items-center justify-between p-2">
-              <h6 className="text-xs text-text-muted ">RESULTS</h6>
+              <h6 className="text-xs text-text-muted ">{resultsLabel}</h6>
               <span className="text-blue-500">↗</span>
             </div>
-            {/* RESULTS */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
-              {RESULTS.map((r) => (
+              {results.map((r) => (
                 <div key={r.title}>
                   <div className="flex items-end gap-4">
                     <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold">
@@ -93,9 +106,8 @@ const KhaznaApp = () => {
                 </div>
               ))}
             </div>
-            {/* BADGES */}
             <div className="flex flex-wrap items-center gap-2 mt-2 border-t border-t-gray-50/20 pt-2">
-              {RESULTS_BADGE.map((b) => (
+              {badges.map((b) => (
                 <Badge key={b} className="rounded-xl">
                   {b}
                 </Badge>
@@ -108,4 +120,4 @@ const KhaznaApp = () => {
   );
 };
 
-export default KhaznaApp;
+export default CaseStudySection;
