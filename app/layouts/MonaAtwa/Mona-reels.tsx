@@ -14,12 +14,12 @@ const MonaReels = () => {
         <SectionCounter start={COUNTER} />
       </div>
       <div className="container mx-auto">
-        <div className="flex items-center justify-between border-b border-gray-50/20 pb-2">
+        <div className="flex items-center justify-between flex-wrap lg:flex-nowrap border-b border-gray-50/20 pb-2">
           <div className="text-6xl lg:text-8xl font-black font-bebas-neue flex items-center gap-2">
             <span className="text-primary">02-</span>
             <h4>DR. MONA ATWA · REELS</h4>
           </div>
-          <p className="text-md text-end font-jet-brains-mono">
+          <p className="lg:text-md text-end font-jet-brains-mono">
             HEALTHCARE · DERMATOLOGY{" "}
             <span className="text-text-muted">ISMAILIA · PS · SUEZ · </span>{" "}
             <br />

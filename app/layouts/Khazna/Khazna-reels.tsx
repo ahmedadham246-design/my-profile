@@ -12,7 +12,7 @@ const KhaznaReels = () => {
         <SectionCounter start={COUNTER} />
       </div>
       <div className="container mx-auto">
-        <div className="flex items-center justify-between border-b border-gray-50/20 pb-2">
+        <div className="flex items-center justify-between flex-wrap lg:flex-nowrap border-b border-gray-50/20 pb-2">
           <div className="text-6xl lg:text-8xl font-black font-bebas-neue flex items-center gap-2">
             <span className="text-primary">01-</span>
             <h4>KHAZNA · REELS</h4>

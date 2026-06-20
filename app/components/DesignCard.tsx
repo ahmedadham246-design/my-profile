@@ -17,12 +17,12 @@ const DesignCard = ({ count, img, link }: IDesignCard) => {
         {counter}
       </span>
       <div className="group cursor-pointer flex flex-col flex-1 min-w-0">
-        <div className="relative flex-1 h-[400px] overflow-hidden bg-gray-50">
+        <div className="relative flex-1 min-h-[450px] overflow-hidden bg-gray-50">
           <Image
             src={img}
             alt={`${img}-${count}`}
-            width={600}
-            height={600}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </div>

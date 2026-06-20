@@ -7,6 +7,7 @@ import Header from "./layouts/Header";
 import KhaznaApp from "./layouts/Khazna/Khazna-app";
 import KhaznaDesigns from "./layouts/Khazna/Khazna-designs";
 import KhaznaReels from "./layouts/Khazna/Khazna-reels";
+import MonaDesigns from "./layouts/MonaAtwa/Mona-designs";
 import MonaReels from "./layouts/MonaAtwa/Mona-reels";
 import MonaAtwa from "./layouts/MonaAtwa/MonaAtwa";
 import Numbers from "./layouts/Numbers";
@@ -24,7 +25,7 @@ const HomeScreen = () => {
       <KhaznaDesigns />
       <MonaAtwa />
       <MonaReels />
-
+      <MonaDesigns />
       <Footer />
     </>
   );
