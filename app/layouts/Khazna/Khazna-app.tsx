@@ -22,13 +22,13 @@ const KhaznaApp = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 h-full ">
           {/* Content */}
-          <div className="flex flex-col justify-between h-full lg:col-span-2 lg:max-w-[80%]">
-            <h4>
+          <div className="flex flex-col justify-between h-full lg:col-span-2 lg:max-w-[85%]">
+            <h4 className=" text-5xl  lg:text-7xl font-black font-bebas-neue">
               EGYPT'S EMBEDDED FINANCE{" "}
               <span className="text-primary">FLAGSHIP</span> SCALED ACROSS TWO
               MARKETS.
             </h4>
-            <p>
+            <p className="text-gray-200 text-lg">
               Built the full content engine from scratch (voice guide, CRM
               library, UX copy, campaigns, and the Saudi Arabia launch) for one
               of Egypt's largest fintech apps. Bilingual, compliant, and human

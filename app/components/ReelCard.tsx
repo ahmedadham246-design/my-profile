@@ -6,11 +6,12 @@ import { useEffect, useState } from "react";
 
 interface ReelCardProps {
   videoUrl: string;
-  seenCount: number;
+  count: number;
+  views?: number;
   className?: string;
 }
 
-const ReelCard = ({ seenCount, videoUrl }: ReelCardProps) => {
+const ReelCard = ({ videoUrl, count, views }: ReelCardProps) => {
   const [thumbnail, setThumbnail] = useState<string | null>(null);
 
   useEffect(() => {
@@ -29,6 +30,21 @@ const ReelCard = ({ seenCount, videoUrl }: ReelCardProps) => {
       rel="noopener noreferrer"
       className={`relative h-[600px] w-[350px] overflow-hidden rounded-2xl  block ${""}`}
     >
+      {count && (
+        <span className="absolute top-4 left-4 text-sm text-text-muted">
+          {count.toLocaleString().padStart(2, "0")}
+        </span>
+      )}
+      {views != null && views > 0 && (
+        <span className="absolute top-4 right-4 flex items-center gap-1 text-sm text-text-muted">
+          <Eye className="size-3.5" />
+          {views >= 1000000
+            ? `${(views / 1000000).toFixed(1)}M`
+            : views >= 1000
+              ? `${(views / 1000).toFixed(1)}K`
+              : views.toString()}
+        </span>
+      )}
       {thumbnail ? (
         <img
           src={thumbnail}

@@ -5,6 +5,7 @@ import Career from "./layouts/Career";
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
 import KhaznaApp from "./layouts/Khazna/Khazna-app";
+import KhaznaReels from "./layouts/Khazna/Khazna-reels";
 import Numbers from "./layouts/Numbers";
 
 const HomeScreen = () => {
@@ -16,12 +17,7 @@ const HomeScreen = () => {
       <Numbers />
       <Career />
       <KhaznaApp />
-      {/* <div className="h-screen flex items-center justify-center">
-        <ReelCard
-          videoUrl="https://www.tiktok.com/@zeed_eg/video/7484369508887563528?lang=en"
-          seenCount={100}
-        />
-      </div> */}
+      <KhaznaReels />
 
       <Footer />
     </>
