@@ -165,7 +165,7 @@ const ReelCard = ({
             {/* Bottom info */}
             <div className="flex flex-col gap-2">
               <h5 className="text-xl md:text-2xl font-bebas-neue font-medium tracking-wider text-white leading-tight line-clamp-2 uppercase">
-                {title || "Khazna Reels"}
+                {title || ""}
               </h5>
 
               {views != null && views > 0 && (
@@ -192,7 +192,7 @@ const ReelCard = ({
             <span className="text-xl font-bold font-jet-brains-mono text-white/50">
               {count.toString().padStart(2, "0")}
             </span>
-            <span className="px-2.5 py-1 text-[10px] font-bold tracking-wider rounded-full bg-white/15 backdrop-blur-md border border-white/10 text-white flex items-center gap-1.5 shadow-sm uppercase font-jet-brains-mono font-bold">
+            <span className="px-2.5 py-1 text-[10px] tracking-wider rounded-full bg-white/15 backdrop-blur-md border border-white/10 text-white flex items-center gap-1.5 shadow-sm uppercase font-jet-brains-mono font-bold">
               <PlatformIcon className="size-3" />
               {platform.name}
             </span>
@@ -201,7 +201,7 @@ const ReelCard = ({
           {/* Bottom Row */}
           <div className="mt-auto z-10 flex flex-col gap-2">
             <h5 className="text-xl md:text-2xl font-bebas-neue font-medium tracking-wider text-white leading-tight line-clamp-2 uppercase">
-              {title || "Khazna Reels"}
+              {title || ""}
             </h5>
 
             {views != null && views > 0 && (
