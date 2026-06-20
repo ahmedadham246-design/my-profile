@@ -1,6 +1,7 @@
 import ReelCard from "@/app/components/ReelCard";
 import SectionCounter from "@/app/components/section-counter";
 import SectionCounterDescription from "@/app/components/section-counter-descriotion";
+import Slider from "@/app/components/Slider";
 import { KHAZNA_REELS } from "@/app/data/KhaznaData";
 const COUNTER = 7;
 const KhaznaReels = () => {
@@ -21,10 +22,18 @@ const KhaznaReels = () => {
             <span className="text-text-muted text-end">2021–2025</span>
           </p>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {KHAZNA_REELS.map((r, idx) => (
-            <ReelCard key={r.link} videoUrl={r.link} count={idx + 1} />
-          ))}
+        <div className="mt-10 w-full overflow-hidden">
+          <Slider
+            data={KHAZNA_REELS.map((r, idx) => (
+              <ReelCard
+                key={r.link}
+                videoUrl={r.link}
+                count={idx + 1}
+                title={r.title}
+                views={r.views}
+              />
+            ))}
+          />
         </div>
       </div>
     </section>
