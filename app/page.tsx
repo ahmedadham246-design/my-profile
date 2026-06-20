@@ -42,6 +42,7 @@ import {
 } from "./data/AnticoData";
 import { ICON_BADGES, ICON_METRICS, ICON_REELS } from "./data/IconData";
 import { ZEED_METRICS, ZEED_BADGES, ZEED_REELS } from "./data/ZeedData";
+import Brands from "./layouts/Brands";
 
 const HomeScreen = () => {
   return (
@@ -264,8 +265,8 @@ const HomeScreen = () => {
         logoHeight={50}
         headline={
           <>
-            FIXED THE <span className="text-primary">SPACE</span> BEFORE
-            FIXING THE CONTENT.
+            FIXED THE <span className="text-primary">SPACE</span> BEFORE FIXING
+            THE CONTENT.
           </>
         }
         description="A café-PlayStation hybrid that wanted to reposition as a café only, but the floor plan worked against the story. First deliverable wasn't content, it was a renovation plan. Then content followed."
@@ -319,6 +320,7 @@ const HomeScreen = () => {
         dateRange="2025"
         reels={ZEED_REELS}
       />
+      <Brands />
       <Footer />
     </>
   );
