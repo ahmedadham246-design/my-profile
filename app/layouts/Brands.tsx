@@ -34,7 +34,7 @@ const Brands = () => {
                     return (
                       <li
                         className={`font-jet-brains-mono text-gray-500 text-sm my-2 ${index < b.brands.length - 1 ? "border-b border-gray-700" : ""}`}
-                        key={index}
+                        key={`${b.category}-${index}`}
                       >
                         {brand}
                       </li>
