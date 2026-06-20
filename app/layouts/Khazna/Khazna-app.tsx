@@ -17,7 +17,7 @@ const KhaznaApp = () => {
           <h3 className="text-primary font-bebas-neue font-semibold text-6xl lg:text-7xl flex-wrap lg:flex-nowrap">
             01 Khazna App
           </h3>
-          <Image src={KhaznaLogo} alt="Khazna Logo" width={250} height={150} />
+          <Image src={KhaznaLogo} alt="Khazna Logo" width={250} height={150} style={{ width: "auto", height: "auto" }} />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 h-full ">
