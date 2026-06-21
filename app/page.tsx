@@ -22,13 +22,7 @@ import Header from "./layouts/Header";
 
 import Numbers from "./layouts/Numbers";
 
-// Logos
-import KhaznaLogo from "@/public/images/khazna.webp";
-import MonaLogo from "@/public/images/dr-mona-logo.webp";
-import RoastLogo from "@/public/images/roast-logo.webp";
-import GrandPadelLogo from "@/public/images/padel-logo.webp";
-import AnticoLogo from "@/public/images/antico-logo.webp";
-import ZeedLogo from "@/public/images/zed-logo.webp";
+
 import { ROAST_BADGES, ROAST_METRICS, ROAST_REELS } from "./data/RoastData";
 import {
   GRAND_PADEL_BADGES,
@@ -72,7 +66,7 @@ const HomeScreen = () => {
           counter={6}
           caseLabel="CASE 01"
           title="01 Khazna App"
-          logo={KhaznaLogo}
+          logo="/images/khazna.webp"
           logoAlt="Khazna Logo"
           logoWidth={250}
           logoHeight={150}
@@ -126,7 +120,7 @@ const HomeScreen = () => {
           counter={9}
           caseLabel="CASE 02"
           title="02 Dr. Mona Atwa"
-          logo={MonaLogo}
+          logo="/images/dr-mona-logo.webp"
           logoAlt="Dr. Mona Atwa Logo"
           logoWidth={150}
           logoHeight={50}
@@ -179,7 +173,7 @@ const HomeScreen = () => {
           counter={12}
           caseLabel="CASE 03"
           title="03 Roast N' Toast"
-          logo={RoastLogo}
+          logo="/images/roast-logo.webp"
           logoAlt="Roast N' Toast Logo"
           logoWidth={150}
           logoHeight={50}
@@ -218,7 +212,7 @@ const HomeScreen = () => {
           counter={14}
           caseLabel="CASE 04"
           title="04 Grand Padel"
-          logo={GrandPadelLogo}
+          logo="/images/padel-logo.webp"
           logoAlt="Grand Padel Logo"
           logoWidth={150}
           logoHeight={50}
@@ -256,7 +250,7 @@ const HomeScreen = () => {
           counter={16}
           caseLabel="CASE 05"
           title="05 Antico"
-          logo={AnticoLogo}
+          logo="/images/antico-logo.webp"
           logoAlt="Antico Logo"
           logoWidth={150}
           logoHeight={50}
@@ -346,7 +340,7 @@ const HomeScreen = () => {
           counter={21}
           caseLabel="CASE 07"
           title="07 Zeed"
-          logo={ZeedLogo}
+          logo="/images/zed-logo.webp"
           logoAlt="Zeed Logo"
           logoWidth={150}
           logoHeight={50}

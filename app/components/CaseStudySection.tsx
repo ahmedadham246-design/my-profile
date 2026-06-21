@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import SectionCounter from "@/app/components/section-counter";
 import SectionCounterDescription from "@/app/components/section-counter-descriotion";
 import { Badge } from "@/app/components/Badge";
@@ -8,7 +8,7 @@ interface CaseStudySectionProps {
   counter: number;
   caseLabel: string;
   title: string;
-  logo?: StaticImageData;
+  logo?: string;
   logoAlt?: string;
   logoWidth?: number;
   logoHeight?: number;
