@@ -16,9 +16,9 @@ const About = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 ">
-        <div className="relative h-full order-2 lg:order-2 ">
+        <div className="relative aspect-3/4 lg:aspect-auto lg:h-full order-2 lg:order-2 ">
           <Image
-            src={"/images/about.png"}
+            src={"/images/about.webp"}
             alt="Ahmed Adham"
             priority={true}
             loading="eager"

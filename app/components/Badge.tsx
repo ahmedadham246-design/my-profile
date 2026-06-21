@@ -7,8 +7,8 @@ interface BadgeProps extends HTMLAttributes<HTMLSpanElement> {
 export const Badge = ({ children, ...props }: BadgeProps) => {
   return (
     <span
-      className={`border-[0.5px] border-foreground/30 rounded-md px-2 py-1 text-xs cursor-pointer transition-all hover:bg-primary hover:text-black  hover:scale-105 duration-200 hover:shadow-md ${props.className}`}
       {...props}
+      className={`border-[0.5px] border-foreground/30 rounded-md px-2 py-1 text-xs cursor-pointer transition-all hover:bg-primary hover:text-black  hover:scale-105 duration-200 hover:shadow-md ${props.className}`}
     >
       {children}
     </span>
