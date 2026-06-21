@@ -2,16 +2,9 @@ import Image from "next/image";
 import SectionCounter from "../components/section-counter";
 import SectionCounterDescription from "../components/section-counter-descriotion";
 import { ABOUT_BADGES } from "../data/About";
+import { Badge } from "../components/Badge";
 
 const SECTION_NUMBER = 2;
-
-const Badge = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <span className="border-[0.5px] border-foreground/30 rounded-md px-2 py-1 text-xs cursor-pointer transition-all hover:bg-primary hover:text-black  hover:scale-105 duration-200 hover:shadow-md">
-      {children}
-    </span>
-  );
-};
 
 const About = () => {
   return (
@@ -23,9 +16,9 @@ const About = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 ">
-        <div className="relative h-full order-2 lg:order-2 ">
+        <div className="relative aspect-3/4 lg:aspect-auto lg:h-full order-2 lg:order-2 ">
           <Image
-            src={"/images/about.png"}
+            src={"/images/about.webp"}
             alt="Ahmed Adham"
             priority={true}
             loading="eager"

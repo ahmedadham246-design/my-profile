@@ -21,6 +21,9 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: "Ahmed Adham",
   description: "Ahmed Adham",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({

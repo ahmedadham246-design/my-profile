@@ -6,9 +6,9 @@
   --foreground: #f4f2ee;
   --foreground-muted: #ffffff;
   --primary: #e5bc29;
+  --footer: #d6af25;
   --primary-foreground: #e8bd26;
   --text-muted: #989795;
-
   --font-bebas-neue: "Bebas Neue", sans-serif;
   --font-jet-brains-mono: "JetBrains Mono", monospace;
   --font-dm-sans: "DM Sans", sans-serif;
@@ -21,6 +21,7 @@
   --color-foreground-muted: var(--foreground-muted);
   --color-text-muted: var(--text-muted);
   --color-primary: var(--primary);
+  --color-footer: var(--footer);
   --color-primary-foreground: var(--primary-foreground);
   --font-bebas-neue: var(--font-bebas-neue);
   --font-jet-brains-mono: var(--font-jet-brains-mono);
@@ -42,6 +43,9 @@ body {
 
 .section {
   scroll-snap-align: start;
+}
+.section-header {
+  @apply flex items-center justify-between;
 }
 
 /* SCROLLBAR STYLES */
