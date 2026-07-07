@@ -22,7 +22,7 @@ const Header = () => {
       {/* ====================== MAIN CONTENT ====================== */}
       <div className="mt-8 md:mt-18  w-full relative grid grid-cols-1  md:grid-cols-3">
         {/* Left Content  */}
-        <div className="col-span-1 md:col-span-2 md:static md:z-10">
+        <div className="col-span-1 md:col-span-2 md:static z-20">
           <RevealOnLoad delay={0.1}>
             <h3 className="text-primary font-jet-brains-mono text-lg mb-8 md:mb-12">
               CONTENT TEAM LEAD · CREATIVE STRATEGIST
@@ -67,7 +67,7 @@ const Header = () => {
           </RevealOnLoad>
         </div>
         {/* Right Content Image  */}
-        <RevealOnLoad delay={0.3} className="w-full lg:absolute lg:-right-90 lg:-top-30 lg:h-full lg:w-[67%] z-10">
+        <RevealOnLoad delay={0.3} className="w-full md:absolute md:-right-24 md:-top-16 md:w-[48%] md:h-full lg:absolute lg:-right-90 lg:-top-30 lg:h-full lg:w-[67%] z-10">
           <Image
             src={"/images/header.webp"}
             alt={"Ahmed Adham"}
