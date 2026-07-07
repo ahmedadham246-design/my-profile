@@ -342,6 +342,7 @@ const HomeScreen = () => {
           subtitleMuted="2025 "
           dateRange="2025"
           reels={ICON_REELS}
+          folderName="icon_10"
         />
       </ScrollReveal>
 
