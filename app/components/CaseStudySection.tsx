@@ -3,6 +3,7 @@ import Image from "next/image";
 import SectionCounter from "@/app/components/section-counter";
 import SectionCounterDescription from "@/app/components/section-counter-descriotion";
 import { Badge } from "@/app/components/Badge";
+import { AnimatedNumberText } from "./numberFlow";
 
 interface CaseStudySectionProps {
   counter: number;
@@ -113,8 +114,8 @@ const CaseStudySection = ({
                 {results.map((r) => (
                   <div key={r.title}>
                     <div className="flex items-end gap-4">
-                      <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold">
-                        {r.title}
+                      <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold flex items-baseline">
+                        <AnimatedNumberText text={r.title} />
                       </p>
                       {r.unit ? (
                         <span className="text-white font-bold text-2xl">
@@ -146,8 +147,8 @@ const CaseStudySection = ({
                 {results.map((r) => (
                   <div key={r.title}>
                     <div className="flex items-end gap-4">
-                      <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold">
-                        {r.title}
+                      <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold flex items-baseline">
+                        <AnimatedNumberText text={r.title} />
                       </p>
                       {r.unit ? (
                         <span className="text-white font-bold text-2xl">

@@ -1,6 +1,7 @@
 import SectionCounter from "../components/section-counter";
 import SectionCounterDescription from "../components/section-counter-descriotion";
 import { NUMBERS_FIRST_SECTION, NUMBERS_SECOND_SECTION } from "../data/Numbers";
+import { AnimatedNumberText } from "../components/numberFlow";
 
 const SECTION_NUMBER = 4;
 
@@ -46,8 +47,8 @@ const Numbers = () => {
                     <p>{item.duration}</p>
                   </div>
 
-                  <p className="font-bebas-neue  text-6xl lg:text-8xl">
-                    {item.Number}
+                  <p className="font-bebas-neue text-6xl lg:text-8xl flex items-baseline">
+                    <AnimatedNumberText text={item.Number} />
                     <span
                       className={`text-6xl ${isFirstCard ? "text-black" : "text-primary"}`}
                     >
@@ -79,8 +80,8 @@ const Numbers = () => {
                     )}
                   </div>
 
-                  <p className="font-bebas-neue  text-6xl lg:text-8xl">
-                    {item.Number}
+                  <p className="font-bebas-neue text-6xl lg:text-8xl flex items-baseline">
+                    <AnimatedNumberText text={item.Number} />
                     <span className={`text-6xl text-primary`}>{item.unit}</span>
                   </p>
                   <p className="text-sm">{item.description}</p>

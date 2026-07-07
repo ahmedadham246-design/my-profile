@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SectionCounter from "../components/section-counter";
 import RevealOnLoad from "../components/RevealOnLoad";
+import { AnimatedNumberText } from "../components/numberFlow";
 
 const Header = () => {
   return (
@@ -42,8 +43,8 @@ const Header = () => {
               <span className="text-primary">
                 I craft brands people talk about
               </span>{" "}
-              , and numbers worth remembering. Founder &amp; CEO at KKA — 6+ years
-              across fintech, F&amp;B, healthcare, fashion and sports.
+              , and numbers worth remembering. Founder &amp; CEO at KKA — 6+
+              years across fintech, F&amp;B, healthcare, fashion and sports.
             </p>
           </RevealOnLoad>
 
@@ -53,21 +54,33 @@ const Header = () => {
             <div className="grid grid-cols-1 md:grid-cols-3">
               <div className="header-statistics">
                 <p>USERS REACHED ACROSS BRANDS</p>
-                <span>50M+</span>
+                <AnimatedNumberText
+                  text="50M+"
+                  className="text-primary text-4xl font-bold font-jet-brains-mono"
+                />
               </div>
               <div className="header-statistics">
                 <p>CLIENT SALES DRIVEN WITH ONE CLIENT</p>
-                <span>31M EGP</span>
+                <AnimatedNumberText
+                  text="31M EGP"
+                  className="text-primary text-4xl font-bold font-jet-brains-mono"
+                />
               </div>
               <div className="header-statistics">
                 <p>BRANDS BUILT & MANAGED</p>
-                <span>40+</span>
+                <AnimatedNumberText
+                  text="40+"
+                  className="text-primary text-4xl font-bold font-jet-brains-mono"
+                />
               </div>
             </div>
           </RevealOnLoad>
         </div>
         {/* Right Content Image  */}
-        <RevealOnLoad delay={0.3} className="w-full md:absolute md:-right-24 md:-top-16 md:w-[48%] md:h-full lg:absolute lg:-right-90 lg:-top-30 lg:h-full lg:w-[67%] z-10">
+        <RevealOnLoad
+          delay={0.3}
+          className="w-full md:absolute md:-right-24 md:-top-16 md:w-[48%] md:h-full lg:absolute lg:-right-90 lg:-top-30 lg:h-full lg:w-[67%] z-10"
+        >
           <Image
             src={"/images/header.webp"}
             alt={"Ahmed Adham"}
