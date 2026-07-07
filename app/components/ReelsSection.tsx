@@ -18,6 +18,7 @@ interface ReelsSectionProps {
   subtitleMuted: string;
   dateRange: string;
   reels: ReelData[];
+  folderName?: string;
 }
 
 const ReelsSection = ({
@@ -29,6 +30,7 @@ const ReelsSection = ({
   subtitleMuted,
   dateRange,
   reels,
+  folderName,
 }: ReelsSectionProps) => {
   return (
     <section className="section bg-black ">
@@ -57,6 +59,7 @@ const ReelsSection = ({
                 count={idx + 1}
                 title={r.title}
                 views={r.views}
+                thumbnailUrl={folderName ? `/${folderName}/${idx + 1}.webp` : undefined}
               />
             ))}
           />

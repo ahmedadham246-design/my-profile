@@ -104,6 +104,7 @@ interface ReelCardProps {
   views?: number;
   title?: string;
   className?: string;
+  thumbnailUrl?: string;
 }
 
 const ReelCard = ({
@@ -112,21 +113,27 @@ const ReelCard = ({
   views,
   title,
   className,
+  thumbnailUrl,
 }: ReelCardProps) => {
-  const [thumbnail, setThumbnail] = useState<string | null>(null);
+  const [oembedThumbnail, setOembedThumbnail] = useState<string | null>(null);
 
   useEffect(() => {
+    if (thumbnailUrl) return;
     let active = true;
     fetch(`/api/oembed?url=${encodeURIComponent(videoUrl)}`)
       .then((res) => res.json())
       .then((data) => {
-        if (active && data.thumbnail) setThumbnail(data.thumbnail);
+        if (active && data.thumbnail) setOembedThumbnail(data.thumbnail);
       })
       .catch(() => {});
     return () => {
       active = false;
     };
-  }, [videoUrl]);
+  }, [videoUrl, thumbnailUrl]);
+
+  const [imageError, setImageError] = useState(false);
+  
+  const finalThumbnail = (thumbnailUrl && !imageError) ? thumbnailUrl : oembedThumbnail;
 
   const platform = getPlatform(videoUrl);
   const PlatformIcon = platform.icon;
@@ -138,12 +145,13 @@ const ReelCard = ({
       rel="noopener noreferrer"
       className={`group relative h-[480px] md:h-[600px] w-[280px] md:w-[340px] shrink-0 overflow-hidden rounded-2xl border border-white/10 bg-background-muted transition-all duration-500 hover:border-primary/40 hover:shadow-2xl hover:shadow-primary/5 select-none snap-start block ${className || ""}`}
     >
-      {thumbnail ? (
+      {finalThumbnail ? (
         <>
           {/* Card Image Background */}
           <img
-            src={thumbnail}
+            src={finalThumbnail}
             alt={title || "Video thumbnail"}
+            onError={() => setImageError(true)}
             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
           {/* Elegant Dark Gradient Overlay */}

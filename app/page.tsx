@@ -97,6 +97,7 @@ const HomeScreen = () => {
           subtitleMuted="EGYPT + KSA "
           dateRange="2021–2025"
           reels={KHAZNA_REELS}
+          folderName="khazna"
         />
       </ScrollReveal>
 
@@ -150,6 +151,7 @@ const HomeScreen = () => {
           subtitleMuted="ISMAILIA · PS · SUEZ · "
           dateRange="2019-Present"
           reels={MONA_REELS}
+          folderName="mona_atwa"
         />
       </ScrollReveal>
 
@@ -203,6 +205,7 @@ const HomeScreen = () => {
           subtitleMuted="2025"
           dateRange="2019-Present"
           reels={ROAST_REELS}
+          folderName="Roast_n_toast"
         />
       </ScrollReveal>
 
@@ -241,6 +244,7 @@ const HomeScreen = () => {
           subtitleMuted="2025"
           dateRange="2025"
           reels={GRAND_PADEL_REELS}
+          folderName="grand_padel"
         />
       </ScrollReveal>
 
@@ -280,6 +284,7 @@ const HomeScreen = () => {
           subtitleMuted="ISMAILIA · "
           dateRange="2025"
           reels={ANTICO_REELS}
+          folderName="antico"
         />
       </ScrollReveal>
 
@@ -370,6 +375,7 @@ const HomeScreen = () => {
           subtitleMuted="2025"
           dateRange="2025"
           reels={ZEED_REELS}
+          folderName="zeed"
         />
       </ScrollReveal>
 
