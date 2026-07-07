@@ -20,6 +20,7 @@ interface CaseStudySectionProps {
   resultsLabel: string;
   results: { title: string; unit?: string; description: string }[];
   badges: string[];
+  pageLink?: string;
 }
 
 const CaseStudySection = ({
@@ -38,6 +39,7 @@ const CaseStudySection = ({
   resultsLabel,
   results,
   badges,
+  pageLink,
 }: CaseStudySectionProps) => {
   return (
     <section className="section bg-black ">
@@ -51,13 +53,25 @@ const CaseStudySection = ({
             {title}
           </h3>
           {logo && (
-            <Image
-              src={logo}
-              alt={logoAlt || ""}
-              width={logoWidth || 150}
-              height={logoHeight || 50}
-              style={{ width: "auto", height: "auto" }}
-            />
+            pageLink ? (
+              <a href={pageLink} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <Image
+                  src={logo}
+                  alt={logoAlt || ""}
+                  width={logoWidth || 150}
+                  height={logoHeight || 50}
+                  style={{ width: "auto", height: "auto" }}
+                />
+              </a>
+            ) : (
+              <Image
+                src={logo}
+                alt={logoAlt || ""}
+                width={logoWidth || 150}
+                height={logoHeight || 50}
+                style={{ width: "auto", height: "auto" }}
+              />
+            )
           )}
         </div>
 
@@ -84,38 +98,78 @@ const CaseStudySection = ({
             </ul>
           </div>
 
-          <div className="bg-[#161616] px-4 py-6 col-span-1 border border-gray-50/20 ">
-            <div className="border-b border-b-gray-50/20 flex items-center justify-between p-2">
-              <h6 className="text-xs text-text-muted ">{resultsLabel}</h6>
-              <span className="text-blue-500">↗</span>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
-              {results.map((r) => (
-                <div key={r.title}>
-                  <div className="flex items-end gap-4">
-                    <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold">
-                      {r.title}
-                    </p>
-                    {r.unit ? (
-                      <span className="text-white font-bold text-2xl">
-                        {r.unit}
-                      </span>
-                    ) : (
-                      ""
-                    )}
+          {pageLink ? (
+            <a
+              href={pageLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#161616] px-4 py-6 col-span-1 border border-gray-50/20 hover:border-primary/50 transition-colors block"
+            >
+              <div className="border-b border-b-gray-50/20 flex items-center justify-between p-2">
+                <h6 className="text-xs text-text-muted ">{resultsLabel}</h6>
+                <span className="text-blue-500">↗</span>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
+                {results.map((r) => (
+                  <div key={r.title}>
+                    <div className="flex items-end gap-4">
+                      <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold">
+                        {r.title}
+                      </p>
+                      {r.unit ? (
+                        <span className="text-white font-bold text-2xl">
+                          {r.unit}
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                    <span className="text-xs">{r.description}</span>
                   </div>
-                  <span className="text-xs">{r.description}</span>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="flex flex-wrap items-center gap-2 mt-2 border-t border-t-gray-50/20 pt-2">
+                {badges.map((b) => (
+                  <Badge key={b} className="rounded-xl">
+                    {b}
+                  </Badge>
+                ))}
+              </div>
+            </a>
+          ) : (
+            <div className="bg-[#161616] px-4 py-6 col-span-1 border border-gray-50/20 ">
+              <div className="border-b border-b-gray-50/20 flex items-center justify-between p-2">
+                <h6 className="text-xs text-text-muted ">{resultsLabel}</h6>
+                <span className="text-blue-500">↗</span>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
+                {results.map((r) => (
+                  <div key={r.title}>
+                    <div className="flex items-end gap-4">
+                      <p className="text-primary font-bebas-neue text-5xl lg:text-6xl font-semibold">
+                        {r.title}
+                      </p>
+                      {r.unit ? (
+                        <span className="text-white font-bold text-2xl">
+                          {r.unit}
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                    <span className="text-xs">{r.description}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-wrap items-center gap-2 mt-2 border-t border-t-gray-50/20 pt-2">
+                {badges.map((b) => (
+                  <Badge key={b} className="rounded-xl">
+                    {b}
+                  </Badge>
+                ))}
+              </div>
             </div>
-            <div className="flex flex-wrap items-center gap-2 mt-2 border-t border-t-gray-50/20 pt-2">
-              {badges.map((b) => (
-                <Badge key={b} className="rounded-xl">
-                  {b}
-                </Badge>
-              ))}
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

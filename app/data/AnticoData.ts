@@ -37,7 +37,7 @@ export const ANTICO_REELS: { link: string; title?: string; views?: number }[] =
       link: "https://www.tiktok.com/@antico_eg/video/7465733551250574600?lang=en",
     },
     {
-      link: "https://www.tiktok.com/@antico_eg/video/7461364379561381127?lang=en",
+      link: "https://www.tiktok.com/@antico_eg/video/7486822609829612807?lang=en",
     },
   ];
 

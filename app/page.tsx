@@ -84,6 +84,7 @@ const HomeScreen = () => {
           resultsLabel="RESULTS"
           results={RESULTS}
           badges={RESULTS_BADGE}
+          pageLink="https://www.facebook.com/KhaznaApp"
         />
       </ScrollReveal>
 
@@ -138,6 +139,7 @@ const HomeScreen = () => {
           resultsLabel="METRICS"
           results={MONA_METRICS}
           badges={MONA_BADGES}
+          pageLink="https://www.facebook.com/profmonaatwa/"
         />
       </ScrollReveal>
 
@@ -192,6 +194,7 @@ const HomeScreen = () => {
           resultsLabel="METRICS"
           results={ROAST_METRICS}
           badges={ROAST_BADGES}
+          pageLink="https://www.instagram.com/roastntoast.eg/"
         />
       </ScrollReveal>
 
@@ -231,6 +234,7 @@ const HomeScreen = () => {
           resultsLabel="RESULTS"
           results={GRAND_PADEL_METRICS}
           badges={GRAND_PADEL_BADGES}
+          pageLink="http://www.instagram.com/grand__padel"
         />
       </ScrollReveal>
 
@@ -271,6 +275,7 @@ const HomeScreen = () => {
           resultsLabel="RESULTS"
           results={ANTICO_METRICS}
           badges={ANTICO_BADGES}
+          pageLink="https://www.instagram.com/antico_eg/"
         />
       </ScrollReveal>
 
@@ -323,6 +328,7 @@ const HomeScreen = () => {
           resultsLabel="RESULTS"
           results={ICON_METRICS}
           badges={ICON_BADGES}
+          pageLink="https://www.instagram.com/icon.10.eg/"
         />
       </ScrollReveal>
 
